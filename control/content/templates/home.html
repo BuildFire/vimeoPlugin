@@ -61,17 +61,18 @@
 <hr class="none">
 <div class="item clearfix row">
   <div ng-switch="ContentHome.contentType" class="main pull-right col-md-9">
-    <p ng-switch-when="Channel Feed">Channel Feed Example: <a
+    <p class="info padding-zero" ng-switch-when="Channel Feed">Note 1: Channel Feed Example: <a
         href="https://vimeo.com/channels/pmg" target="_blank">https://vimeo.com/channels/pmg</a>
     </p>
 
-    <p ng-switch-when="User Feed">User Feed Example: <a
+    <p class="info padding-zero" ng-switch-when="User Feed">Note 1: User Feed Example: <a
         href="http://vimeo.com/gopro" target="_blank">http://vimeo.com/gopro</a>
     </p>
 
-    <p ng-switch-when="Single Video">Single Video Example: <a
+    <p class="info padding-zero" ng-switch-when="Single Video">Note 1: Single Video Example: <a
         href="https://vimeo.com/130824206" target="_blank">https://vimeo.com/130824206</a>
     </p>
+    <p class="info padding-zero">Note 2: It is best to use secure websites (<strong>https</strong>) some operating systems require it.</p>
   </div>
 </div>
 <hr ng-hide="ContentHome.contentType == ContentHome.CONTENT_TYPE.SINGLE_VIDEO">
