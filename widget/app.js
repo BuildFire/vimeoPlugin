@@ -81,7 +81,7 @@
         .filter('returnVimeoUrl', ['$sce', function ($sce) {
             return function (uri) {
                 var id = uri.split("/").pop();
-                return $sce.trustAsResourceUrl("http://player.vimeo.com/video/" + id);
+                return $sce.trustAsResourceUrl("https://player.vimeo.com/video/" + id);
             }
         }])
         .directive("triggerNgRepeatRender", [function () {
