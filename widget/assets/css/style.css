@@ -273,3 +273,8 @@ html[browser="Firefox"] .layout3 .list-layout .list-item-media .list-media-holde
 	margin-left:-12px;
 	margin-top:-12px;
 }
+
+.link-list {
+	display: flex;
+	justify-content: space-between;
+}
