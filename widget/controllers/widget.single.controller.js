@@ -21,6 +21,12 @@
             buildfire.navigation.openWindow(link);
         };
 
+        WidgetSingle.share = function (data) {
+          window.buildfire.device.share({
+            link: data.video.link
+          }, () => {});
+        }
+
         /*
          * Fetch user's data from datastore
          */

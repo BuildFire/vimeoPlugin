@@ -19,6 +19,6 @@
 ,"widget":{
 
 },
-  "features" : [],
+  "features" : [{"name" : "sharing"}],
   "languages" : ["en"]
 }
