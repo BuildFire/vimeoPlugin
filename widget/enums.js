@@ -38,7 +38,7 @@
       ACCESS_TOKEN: 'fa3b572099781e58e1506be643c3934c'
     })
     .constant('VIDEO_COUNT', {
-      LIMIT: 8
+      LIMIT: 14
     })
     .constant('LAYOUTS', {
       listLayouts: [
