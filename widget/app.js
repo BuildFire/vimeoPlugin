@@ -80,7 +80,15 @@
         }])
         .filter('returnVimeoUrl', ['$sce', function ($sce) {
             return function (uri) {
+                console.log('uriiiiiiii',uri);
                 var id = uri.split("/").pop();
+                console.log('idddddddd',id);
+                console.log('id.substr(0, id.indexOf(:))',id.substr(0, id.indexOf(':')));
+// id='528104478?h=257ef1e75a'
+if (id.split(":")[1]) {
+    id = id.split(":")[0] + "?h="+ id.split(":")[1]
+}
+
                 if(id.includes(':'))
                     id = id.substr(0, id.indexOf(':'));
                 return $sce.trustAsResourceUrl("https://player.vimeo.com/video/" + id);

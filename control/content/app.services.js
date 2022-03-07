@@ -45,14 +45,20 @@
       return {
         extractSingleVideoIdOrUserID: function (url) {
           var match = url.match(/(\.com)\/(.+)/);
+ 
+        if (match[2].split("/")[1]) {
+          match[2]= match[2].split("/")[0] + ":" +match[2].split("/")[1]
+        }
           var rgx = /\/.+\/?/g;
 
           if (match && !rgx.test(match[2])) {
             return match[2].split("/")[0];
+          } else if (match && rgx.test(match[2])) {
+            return match[2].split("/")[0]+":"+match[2].split("/")[1];
           } else {
             return null;
           }
-
+// return "528104478:257ef1e75a"
         },
         extractFeedID: function (url) {
           var match = url.match(/(channels)\/(.+)/);
