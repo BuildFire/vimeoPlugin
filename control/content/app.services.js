@@ -45,14 +45,21 @@
       return {
         extractSingleVideoIdOrUserID: function (url) {
           var match = url.match(/(\.com)\/(.+)/);
+ 
+        if (match[2].split("/")[1]) {
+          match[2]= match[2].split("/")[0] + ":" +match[2].split("/")[1]
+        }
           var rgx = /\/.+\/?/g;
 
           if (match && !rgx.test(match[2])) {
+            // normal single videos : should send only the video id
             return match[2].split("/")[0];
+          } else if (match && rgx.test(match[2])) {
+            // this part for unlisted videos >> it should be sent like this "videoId:privacyHash">> sample: "528104478:257ef1e75a"
+            return match[2].split("/")[0]+":"+match[2].split("/")[1];
           } else {
             return null;
           }
-
         },
         extractFeedID: function (url) {
           var match = url.match(/(channels)\/(.+)/);

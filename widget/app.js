@@ -81,6 +81,13 @@
         .filter('returnVimeoUrl', ['$sce', function ($sce) {
             return function (uri) {
                 var id = uri.split("/").pop();
+
+                // this part for unlisted videos >> sample: https://player.vimeo.com/video/528104478/257ef1e75a
+                // it should be sent like this > https://player.vimeo.com/video/528104478?h=257ef1e75a
+                if (id.split(":")[1]) {
+                    id = id.split(":")[0] + "?h="+ id.split(":")[1]
+                }
+                
                 if(id.includes(':'))
                     id = id.substr(0, id.indexOf(':'));
                 return $sce.trustAsResourceUrl("https://player.vimeo.com/video/" + id);
