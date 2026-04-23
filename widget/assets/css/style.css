@@ -1,4 +1,9 @@
 /* Plugin CSS */
+
+html[safe-area="true"] .slide {
+	 padding-top: var(--bf-safe-area-inset-top);
+}
+
 .media-center-plugin.layout2 .people-banner .people-bg{
 	background:rgba(0,0,0,0.8);
 }
