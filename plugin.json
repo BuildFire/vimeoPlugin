@@ -3,7 +3,7 @@
 ,"pluginName":"Vimeo"
 ,"pluginDescription":"Sync your Vimeo channel, user feed, or MP4 stream to provide a fresh viewing experience. New videos automatically update in your app for seamless content delivery."
 ,"supportEmail":"support@buildfire.com"
-,"supportSite":"http://learn.appdocumentation.com/plugin-tutorials/vimeo-plugin-tutorial/"
+,"supportSite":"https://help.appdocumentation.com/how-to-use-the-vimeo-plugin"
 ,"offlineModeEnabled": true
 ,"control":{
   "content":{
